@@ -1,0 +1,105 @@
+ /* :root{
+     --speed: 1;
+ }
+.machine {
+    background-color: coral;
+    border:dashed 3px blue;
+    height: 300px;
+    width: 900px;
+    margin: 50px;
+    display: flex;
+}
+
+#inspeed{
+    font-size: 30pt;
+    margin-left: 30px;
+}
+
+.slot {
+    height: 250px;
+    width: 250px;
+    margin: 20px;
+    overflow: hidden;
+    background-color: seashell;
+    border: solid black 2px;
+    text-align: center;
+    font-size: 100pt;
+    line-height: 230px;
+   
+
+}
+
+.slot > .value {
+    animation-name: slotspin;
+    animation-iteration-count: infinite;
+    animation-duration: calc(1s/var(--speed));
+}
+
+@keyframes slotspin {
+    0% {
+        transform: translateY(-200px);
+
+    }
+    100% {
+        transform: translateY(200px);
+    }
+} */
+
+
+:root{
+    --speed: 5;
+}
+
+.topic h1{
+    text-align: center;
+    justify-content: center;
+}
+
+.machine{
+    background-color: peru;
+    border: dashed brown 3px;
+    height: 300px;
+    width: 900px;
+    margin: 50px;
+
+    display: flex;
+    z-index: 5;
+}
+
+#inpuspeed{
+    font-size: 30pt;
+    margin-left: 30px;
+    width: 50px;
+}
+
+.slot{
+    height: 250px;
+    margin: 20px;
+    width: 250px;
+    background-color: beige;
+    border: solid darkblue 2px;
+    text-align: center;
+    font-size: 100pt;
+    line-height: 250px;
+    z-index: 1;
+    overflow: hidden;
+
+}
+
+.slot> .value{
+    display: inline-block;
+    z-index: 3;
+    animation-name: slotspin;
+    animation-iteration-count: infinite;
+     animation-duration: calc(1s/ var(--speed));
+}
+    
+
+@keyframes slotspin{
+    0%{
+        transform: translateY(-200px);
+    }
+    100%{
+        transform: translateY(200px);
+    }
+}
